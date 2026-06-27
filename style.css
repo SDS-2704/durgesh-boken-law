@@ -351,17 +351,37 @@ section h2{
 }
 
 .landmark-visual{
-  background:
-    linear-gradient(
-      90deg,
-      rgba(7,23,40,1) 0%,
-      rgba(7,23,40,.72) 32%,
-      rgba(7,23,40,.20) 100%
-    ),
-    url("images/landmark-case.jpg");
-  background-size:cover;
-  background-position:center;
+  position:relative;
   min-height:600px;
+  background:
+    radial-gradient(circle at 65% 40%, rgba(212,175,55,.26), transparent 28%),
+    radial-gradient(circle at 35% 70%, rgba(139,30,63,.22), transparent 30%),
+    linear-gradient(135deg, #071728 0%, #10243a 45%, #d8c3a5 100%);
+  overflow:hidden;
+}
+
+.landmark-visual::before{
+  content:"⚖";
+  position:absolute;
+  right:12%;
+  bottom:12%;
+  font-size:16rem;
+  line-height:1;
+  color:rgba(255,255,255,.16);
+}
+
+.landmark-visual::after{
+  content:"Freedom to choose is a right. Not a privilege.";
+  position:absolute;
+  right:9%;
+  top:18%;
+  max-width:260px;
+  font-family:Georgia,serif;
+  font-size:1.25rem;
+  font-style:italic;
+  color:rgba(7,23,40,.72);
+  border-left:3px solid #8b1e3f;
+  padding-left:20px;
 }
 
 .landmark-button{
@@ -503,9 +523,22 @@ footer{
     font-size:2.2rem;
   }
 
-  .landmark-visual{
-    min-height:360px;
-  }
+ .landmark-visual{
+  min-height:300px;
+}
+
+.landmark-visual::before{
+  font-size:10rem;
+  right:8%;
+  bottom:10%;
+}
+
+.landmark-visual::after{
+  left:30px;
+  right:30px;
+  top:45px;
+  font-size:1rem;
+}
 }
 
 /* ABOUT SECTION */
