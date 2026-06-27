@@ -180,47 +180,6 @@ section h2{
   transform:translateY(-10px);
 }
 
-/* LANDMARK STORY LINK */
-
-#landmarks .cards div{
-  min-height:auto;
-}
-
-.story-link{
-  display:inline-block;
-  text-decoration:none;
-  color:#071728;
-  font-weight:700;
-  margin-top:28px;
-  float:right;
-  text-align:right;
-  transition:.3s;
-}
-
-.story-link span{
-  font-size:1.05rem;
-  letter-spacing:.3px;
-}
-
-.story-line{
-  color:#8b1e3f;
-  font-size:1.15rem;
-  letter-spacing:1px;
-  line-height:1;
-  margin-top:6px;
-  font-weight:700;
-  transition:.35s ease;
-}
-
-.story-link:hover{
-  color:#8b1e3f;
-}
-
-.story-link:hover .story-line{
-  transform:translateX(10px);
-  color:#b31f46;
-}
-
 /* BLOG BUTTONS */
 
 #blog .button{
@@ -344,6 +303,98 @@ section h2{
   transform:translateY(-10px) scale(1.05);
 }
 
+/* DRAMATIC ABSTRACT LANDMARK SECTION */
+
+#landmarks h2{
+  font-family:Georgia,serif;
+  font-size:3.4rem;
+  margin-bottom:12px;
+}
+
+.landmark-feature{
+  display:grid;
+  grid-template-columns:1fr 1.15fr;
+  min-height:600px;
+  background:#071728;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.20);
+  margin-top:45px;
+}
+
+.landmark-content{
+  padding:70px 60px;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+.landmark-label{
+  color:#d4af37;
+  letter-spacing:4px;
+  font-size:.8rem;
+  font-weight:800;
+  margin-bottom:28px;
+}
+
+.landmark-content h3{
+  font-family:Georgia,serif;
+  font-size:3.2rem;
+  line-height:1.15;
+  margin-bottom:32px;
+}
+
+.landmark-content p{
+  color:#d7dde6;
+  font-size:1.08rem;
+  line-height:1.9;
+}
+
+.landmark-visual{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,23,40,1) 0%,
+      rgba(7,23,40,.72) 32%,
+      rgba(7,23,40,.20) 100%
+    ),
+    url("images/landmark-abstract.jpg");
+  background-size:cover;
+  background-position:center;
+  min-height:600px;
+}
+
+.landmark-button{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  margin-top:42px;
+  text-decoration:none;
+  color:white;
+  font-weight:800;
+}
+
+.landmark-button span{
+  background:#8b1e3f;
+  padding:16px 28px;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.landmark-button b{
+  background:#8b1e3f;
+  padding:16px 22px;
+  border-radius:6px;
+  font-size:1.3rem;
+  transition:.3s;
+}
+
+.landmark-button:hover span,
+.landmark-button:hover b{
+  background:#b31f46;
+  transform:translateY(-3px);
+}
+
 /* FOOTER */
 
 footer{
@@ -435,94 +486,11 @@ footer{
   .practice-card{
     min-height:auto;
   }
-}
 
-/* DRAMATIC LANDMARK SECTION */
+  #landmarks h2{
+    font-size:2.5rem;
+  }
 
-.landmark-feature{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:560px;
-  background:#071728;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 25px 60px rgba(0,0,0,.18);
-}
-
-.landmark-content{
-  padding:70px 60px;
-  color:white;
-  position:relative;
-  z-index:2;
-}
-
-.landmark-label{
-  color:#d4af37;
-  letter-spacing:4px;
-  font-size:.8rem;
-  font-weight:800;
-  margin-bottom:25px;
-}
-
-.landmark-content h3{
-  font-family:Georgia,serif;
-  font-size:3rem;
-  line-height:1.15;
-  margin-bottom:30px;
-}
-
-.landmark-content p{
-  color:#d7dde6;
-  font-size:1.08rem;
-  line-height:1.9;
-}
-
-.landmark-image{
-  background:
-    linear-gradient(
-      90deg,
-      rgba(7,23,40,1) 0%,
-      rgba(7,23,40,.65) 35%,
-      rgba(7,23,40,.12) 100%
-    ),
-    url("images/landmark-lesbian-couple.jpg");
-  background-size:cover;
-  background-position:center;
-  min-height:560px;
-}
-
-.landmark-button{
-  display:inline-flex;
-  align-items:center;
-  gap:18px;
-  margin-top:40px;
-  text-decoration:none;
-  color:white;
-  font-weight:800;
-}
-
-.landmark-button span{
-  background:#8b1e3f;
-  padding:16px 28px;
-  border-radius:6px;
-  transition:.3s;
-}
-
-.landmark-button b{
-  background:#8b1e3f;
-  padding:16px 22px;
-  border-radius:6px;
-  font-size:1.3rem;
-  transition:.3s;
-}
-
-.landmark-button:hover span,
-.landmark-button:hover b{
-  background:#b31f46;
-  transform:translateY(-3px);
-}
-
-@media(max-width:900px){
   .landmark-feature{
     grid-template-columns:1fr;
   }
@@ -535,7 +503,7 @@ footer{
     font-size:2.2rem;
   }
 
-  .landmark-image{
+  .landmark-visual{
     min-height:360px;
   }
 }
