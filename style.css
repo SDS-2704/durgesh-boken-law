@@ -57,10 +57,7 @@ body{
   align-items:center;
   text-align:center;
   background:
-  linear-gradient(
-      rgba(5,15,30,.78),
-      rgba(5,15,30,.78)
-  ),
+  linear-gradient(rgba(5,15,30,.78), rgba(5,15,30,.78)),
   url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600");
   background-size:cover;
   background-position:center;
@@ -223,6 +220,7 @@ section h2{
   transform:translateX(10px);
   color:#b31f46;
 }
+
 /* BLOG BUTTONS */
 
 #blog .button{
@@ -249,28 +247,6 @@ section h2{
   flex-direction:column;
   justify-content:space-between;
   min-height:320px;
-}
-
-/* FOOTER */
-
-footer{
-  background:#071728;
-  color:white;
-  text-align:center;
-  padding:40px;
-}
-
-/* ANIMATION */
-
-.hidden{
-  opacity:0;
-  transform:translateY(60px);
-  transition:all 1s;
-}
-
-.show{
-  opacity:1;
-  transform:translateY(0);
 }
 
 /* PREMIUM PRACTICE AREAS */
@@ -317,22 +293,45 @@ footer{
 .practice-card h3{
   font-size:1.6rem;
   margin:30px 0 20px;
+  position:relative;
+  z-index:2;
 }
 
 .practice-card p{
   color:#cfd6df;
+  position:relative;
+  z-index:2;
 }
 
 .practice-card::after{
-  content:"";
+  content:"⚖";
   position:absolute;
-  right:-40px;
-  bottom:-40px;
-  width:130px;
-  height:130px;
-  border:1px solid rgba(212,175,55,.35);
-  border-radius:50%;
+  right:25px;
+  bottom:10px;
+  font-size:7rem;
+  color:rgba(212,175,55,.12);
+  line-height:1;
   transition:.35s ease;
+}
+
+.practice-card:nth-child(2)::after{
+  content:"§";
+}
+
+.practice-card:nth-child(3)::after{
+  content:"⚜";
+}
+
+.practice-card:nth-child(4)::after{
+  content:"▣";
+}
+
+.practice-card:nth-child(5)::after{
+  content:"🛡";
+}
+
+.practice-card:nth-child(6)::after{
+  content:"⚒";
 }
 
 .practice-card:hover{
@@ -341,22 +340,31 @@ footer{
 }
 
 .practice-card:hover::after{
-  right:25px;
-  bottom:25px;
+  color:rgba(212,175,55,.22);
+  transform:translateY(-10px) scale(1.05);
 }
 
-@media(max-width:900px){
-  #practice h2{
-    font-size:2.2rem;
-  }
+/* FOOTER */
 
-  .practice-grid{
-    grid-template-columns:1fr;
-  }
+footer{
+  background:#071728;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
 
-  .practice-card{
-    min-height:auto;
-  }
+/* ANIMATION */
+
+.hidden{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
 
 /* MOBILE */
 
@@ -404,20 +412,27 @@ footer{
     font-size:1rem;
   }
 
-  .stat-word{
-    font-size:2.3rem !important;
-  }
-
   .stats{
     grid-template-columns:1fr;
+  }
+
+  .stat-word{
+    font-size:2.3rem !important;
   }
 
   .cards{
     grid-template-columns:1fr;
   }
 
-  
-}
+  #practice h2{
+    font-size:2.2rem;
+  }
 
+  .practice-grid{
+    grid-template-columns:1fr;
+  }
 
+  .practice-card{
+    min-height:auto;
+  }
 }
