@@ -186,41 +186,39 @@ section h2{
 /* LANDMARK STORY LINK */
 
 #landmarks .cards div{
-  display:flex;
-  flex-direction:column;
-  min-height:330px;
+  position:relative;
+  min-height:230px;
 }
 
 .story-link{
-  display:flex;
+  position:absolute;
+  right:40px;
+  bottom:35px;
+  display:inline-flex;
   flex-direction:column;
   align-items:flex-end;
   text-decoration:none;
   color:#071728;
   font-weight:700;
-  margin-top:auto;
-  padding-top:35px;
-  width:fit-content;
-  margin-left:auto;
 }
 
 .story-link span{
-  font-size:1.05rem;
-}
-
-.story-line{
-  margin-top:4px;
-  color:#d4af37;
   font-size:1rem;
-  letter-spacing:3px;
-  transition:.3s;
   line-height:1;
 }
 
-.story-link:hover .story-line{
-  transform:translateX(10px);
+.story-line{
+  margin-top:0;
+  color:#d4af37;
+  font-size:.9rem;
+  letter-spacing:2px;
+  line-height:1;
+  transition:.3s;
 }
 
+.story-link:hover .story-line{
+  transform:translateX(8px);
+}
 /* BLOG BUTTONS */
 
 #blog .button{
