@@ -239,3 +239,24 @@ footer{
     font-size: 2.3rem !important;
   }
 }
+
+/* BLOG BUTTONS */
+
+#blog .button {
+  background: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  padding: 12px 22px;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+#blog .button:hover {
+  background: #d4af37;
+  color: white;
+  transform: translateY(-2px);
+}
