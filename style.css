@@ -436,3 +436,106 @@ footer{
     min-height:auto;
   }
 }
+
+/* DRAMATIC LANDMARK SECTION */
+
+.landmark-feature{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:560px;
+  background:#071728;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+.landmark-content{
+  padding:70px 60px;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+.landmark-label{
+  color:#d4af37;
+  letter-spacing:4px;
+  font-size:.8rem;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.landmark-content h3{
+  font-family:Georgia,serif;
+  font-size:3rem;
+  line-height:1.15;
+  margin-bottom:30px;
+}
+
+.landmark-content p{
+  color:#d7dde6;
+  font-size:1.08rem;
+  line-height:1.9;
+}
+
+.landmark-image{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,23,40,1) 0%,
+      rgba(7,23,40,.65) 35%,
+      rgba(7,23,40,.12) 100%
+    ),
+    url("images/landmark-lesbian-couple.jpg");
+  background-size:cover;
+  background-position:center;
+  min-height:560px;
+}
+
+.landmark-button{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:40px;
+  text-decoration:none;
+  color:white;
+  font-weight:800;
+}
+
+.landmark-button span{
+  background:#8b1e3f;
+  padding:16px 28px;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.landmark-button b{
+  background:#8b1e3f;
+  padding:16px 22px;
+  border-radius:6px;
+  font-size:1.3rem;
+  transition:.3s;
+}
+
+.landmark-button:hover span,
+.landmark-button:hover b{
+  background:#b31f46;
+  transform:translateY(-3px);
+}
+
+@media(max-width:900px){
+  .landmark-feature{
+    grid-template-columns:1fr;
+  }
+
+  .landmark-content{
+    padding:45px 30px;
+  }
+
+  .landmark-content h3{
+    font-size:2.2rem;
+  }
+
+  .landmark-image{
+    min-height:360px;
+  }
+}
