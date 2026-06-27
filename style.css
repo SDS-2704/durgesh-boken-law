@@ -186,9 +186,7 @@ section h2{
 /* LANDMARK STORY LINK */
 
 #landmarks .cards div{
-  display:flex;
-  flex-direction:column;
-  min-height:260px;
+  min-height:auto;
 }
 
 .story-link{
@@ -196,8 +194,8 @@ section h2{
   text-decoration:none;
   color:#071728;
   font-weight:700;
-  margin-top:auto;
-  margin-left:auto;
+  margin-top:28px;
+  float:right;
   text-align:right;
 }
 
@@ -207,7 +205,7 @@ section h2{
 
 .story-line{
   color:#d4af37;
-  font-size:.95rem;
+  font-size:.9rem;
   letter-spacing:2px;
   line-height:1;
   margin-top:2px;
@@ -217,7 +215,6 @@ section h2{
 .story-link:hover .story-line{
   transform:translateX(8px);
 }
-
 /* BLOG BUTTONS */
 
 #blog .button{
@@ -326,7 +323,5 @@ footer{
     grid-template-columns:1fr;
   }
 
-  #landmarks .cards div{
-    min-height:260px;
-  }
+  
 }
