@@ -262,26 +262,21 @@ footer{
 }
 
 .story-link {
-  display: inline-flex;
-  flex-direction: column;
+  display: inline-block;
   text-decoration: none;
   color: #071728;
-  margin-top: 30px;
-  transition: 0.3s;
-}
-
-.story-link span {
-  font-size: 1.1rem;
   font-weight: 700;
+  margin-top: 35px;
 }
 
-.story-arrow {
-  font-size: 2rem;
+.story-line {
+  margin-top: 10px;
   color: #d4af37;
-  margin-top: 5px;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
   transition: 0.3s;
 }
 
-.story-link:hover .story-arrow {
-  transform: translateX(12px);
+.story-link:hover .story-line {
+  transform: translateX(10px);
 }
