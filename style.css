@@ -197,23 +197,31 @@ section h2{
   margin-top:28px;
   float:right;
   text-align:right;
-}
-
-.story-link span{
-  font-size:1rem;
-}
-
-.story-line{
-  color:#d4af37;
-  font-size:.9rem;
-  letter-spacing:2px;
-  line-height:1;
-  margin-top:2px;
   transition:.3s;
 }
 
+.story-link span{
+  font-size:1.05rem;
+  letter-spacing:.3px;
+}
+
+.story-line{
+  color:#8b1e3f;
+  font-size:1.15rem;
+  letter-spacing:1px;
+  line-height:1;
+  margin-top:6px;
+  font-weight:700;
+  transition:.35s ease;
+}
+
+.story-link:hover{
+  color:#8b1e3f;
+}
+
 .story-link:hover .story-line{
-  transform:translateX(8px);
+  transform:translateX(10px);
+  color:#b31f46;
 }
 /* BLOG BUTTONS */
 
